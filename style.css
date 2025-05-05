@@ -1,0 +1,752 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.nav-links a:focus {
+    outline: none;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.text-content h1 {
+    font-size: 128px;
+    margin: 0;
+}
+
+.text-content span {
+    color: grey;
+}
+
+.text-content {
+    color: black;
+}
+
+.image-card {
+    position: relative;
+    display: block;
+    width: 240px;
+    height: 330px;
+    border-radius: 25px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 24px;
+    z-index: 2;
+}
+
+.gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 20), transparent);
+}
+
+.image-title {
+    position: absolute;
+    bottom: 27px;
+    left: 18px;
+    color: white;
+    font-size: 16px;
+    z-index: 2;
+}
+.image-title a:hover {
+text-decoration: underline;
+}
+
+.intro h1 span {
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem;
+    display: inline-block;
+  }
+
+  .see-more {
+    text-decoration: underline;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  .cards {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .card {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 400px;
+    border-radius: 25px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .overlay .arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .overlay p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.footer {
+    background-color: #d3d3d3;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer-nav {
+    margin-bottom: 8px;
+  }
+  
+  .footer a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-copy {
+    margin: 0;
+  }
+
+  .parchi-section {
+    padding: 50px;
+  }
+  
+  .parchi-titolo {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .parchi-contenitore {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .parchi-testo {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 500px;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  .parchi-galleria {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+  
+  .parchi-card {
+    width: 150px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #ccc;
+  }
+  
+  .parchi-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+  }
+  
+  .parchi-card span {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+    text-shadow: 0px 0px 4px black;
+  }
+  
+  .parchi-piccola {
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .grd_p1234 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background: white;
+  }
+  
+  .crd_x999 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .crd_x999:hover {
+    transform: scale(1.03);
+  }
+  
+  .crd_x999 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+  }
+  
+  .ttl_p999 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 12px 16px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .crd_x999::after {
+    content: "→";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    color: white;
+    opacity: 0.9;
+  }
+  
+  .selected_abc {
+    border: 3px solid #2f80ed;
+    padding: 2px;
+    box-sizing: border-box;
+  }.grd_p1234 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background: white;
+  }
+  
+  .crd_x999 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .crd_x999:hover {
+    transform: scale(1.03);
+  }
+  
+  .crd_x999 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+  }
+  
+  .ttl_p999 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 12px 16px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  .crd_x999::after {
+    content: "→";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    color: white;
+    opacity: 0.9;
+  }
+  
+  .selected_abc {
+    padding: 2px;
+    box-sizing: border-box;
+  }
+
+  .a9x1g-container {
+    background-color: white;
+    padding: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .a9x1g-title {
+    font-family: Arial, sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    margin: 0 0 40px 0;
+  }
+  
+  .a9x1g-title strong {
+    font-weight: 900;
+  }
+  
+  .a9x1g-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .cont_ae19 {
+    padding: 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .titolo_qo39 {
+    font-size: 28px;
+    font-weight: 500;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  
+  .testo_mf82 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 40px;
+  }
+  
+  .galleria_wr12 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .img_zk51 {
+    width: 100%;
+    max-width: 250px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .contenitore_kx93 {
+    padding: 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .titolo_xp20 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+  
+  .griglia_yb72 {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .colonna_testo_dq11 {
+    flex: 2;
+  }
+  
+  .testo_er88 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+  }
+  
+  .colonna_immagini_wk55 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .imgbox_wk91 {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .imgbox_wk91 img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+  }
+  
+  .imgbox_wk91 span {
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    font-size: 13px;
+    color: white;
+    text-shadow: 0 0 4px rgba(0,0,0,0.8);
+  }
+  
+  .img_grande_vc78 {
+    position: relative;
+    margin-top: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .img_grande_vc78 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .img_grande_vc78 span {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+  }
+
+  .rtyu-container {
+    padding: 60px;
+    max-width: 1000px;
+    margin: auto;
+    margin-left: 100px;
+  }
+  
+  .zxcv-titolo {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+  
+  .qwer-testo {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 40px;
+  }
+  
+  .hjkl-immagini {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .asdf-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+      height: auto;
+    }
+  
+    .text-content h1 {
+      font-size: 64px;
+      text-align: center;
+    }
+  
+    .image-card {
+      width: 90%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .navbar {
+      height: auto;
+      padding: 10px;
+    }
+  
+    .intro h1 span {
+      font-size: 2rem;
+      padding: 0.8rem;
+      text-align: center;
+    }
+  
+    .see-more {
+      text-align: center;
+      display: block;
+      margin-top: 15px;
+    }
+  
+    .text-content h1 {
+      font-size: 48px;
+    }
+  
+    .parchi-titolo {
+      font-size: 36px;
+      text-align: center;
+    }
+  
+    .parchi-contenitore {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .parchi-testo {
+      width: 100%;
+      font-size: 20px;
+    }
+  
+    .parchi-galleria {
+      max-width: 100%;
+      justify-content: center;
+    }
+  
+    .parchi-card {
+      width: 45%;
+      height: 180px;
+    }
+  
+    .grd_p1234 {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px;
+      gap: 15px;
+    }
+  
+    .a9x1g-title {
+      font-size: 60px;
+      text-align: center;
+    }
+  
+    .a9x1g-subtitle {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .rtyu-container,
+    .contenitore_kx93,
+    .cont_ae19 {
+      padding: 20px;
+      margin-left: 0;
+    }
+  
+    .griglia_yb72 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .colonna_immagini_wk55 {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .imgbox_wk91 img {
+      height: 100px;
+    }
+  
+    .img_grande_vc78 img {
+      height: 200px;
+    }
+  
+    .galleria_wr12 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .img_zk51 {
+      max-width: 90%;
+      height: auto;
+    }
+  
+    .hjkl-immagini {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .asdf-img {
+      max-width: 90%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-content h1 {
+      font-size: 36px;
+    }
+  
+    .arrow {
+      font-size: 20px;
+    }
+  
+    .image-title {
+      font-size: 14px;
+    }
+  
+    .overlay p {
+      font-size: 1rem;
+    }
+  
+    .ttl_p999 {
+      font-size: 12px;
+      padding: 10px;
+    }
+  
+    .crd_x999::after {
+      font-size: 14px;
+      top: 8px;
+      right: 8px;
+    }
+  
+    .a9x1g-title {
+      font-size: 48px;
+    }
+  
+    .a9x1g-subtitle {
+      font-size: 24px;
+    }
+  
+    .intro h1 span {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+  }
