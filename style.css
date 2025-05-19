@@ -1,78 +1,112 @@
 body {
     margin: 0;
     font-family: Helvetica, sans-serif;
+    max-width: 1800px;
+    margin: auto;
 }
 
+  /*BARRA DI NAVIGAZIONE*/
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+  max-width: 1800px;
+  margin: auto;
+  max-width: 1800px;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 40px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    padding: 0;
-    margin: 0;
+.nav-sinistra {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
+.nav-centrale{
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.nav-links a:hover {
-    font-weight: bold;
-    text-decoration: underline;
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: all 0.8s ease;
 }
 
-
-.nav-links a:focus {
-    outline: none;
-    background-color: black;
-    color: white;
-    border: 2px solid black;
+.nav-sinistra a:hover,
+.nav-centrale a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
+
+.nav-sinistra a:focus,
+.nav-centrale a:focus {
+  outline: none;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+
+  /*MAIN*/
+
+    /*PT1*/
+
+.contenitore1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 30px;
 }
 
 .text-content h1 {
-    font-size: 128px;
-    margin: 0;
+  font-size: 128px;
+  margin: 0;
 }
 
 .text-content span {
-    color: grey;
+  color: grey;
 }
 
 .text-content {
-    color: black;
+  color: black;
 }
 
-.image-card {
+
+/*INIZIO homepage - vesuvio-card*/
+
+.card-home{
     position: relative;
-    display: block;
-    width: 240px;
-    height: 330px;
+    width: 300px;
+    height: 400px;
     border-radius: 25px;
     overflow: hidden;
     text-decoration: none;
+    transition: transform 0.3s ease
 }
 
-.image-card img {
+.card-home:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.card-home img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .image-overlay {
@@ -81,7 +115,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
 }
 
 .arrow {
@@ -91,7 +124,9 @@ body {
     color: white;
     font-size: 24px;
     z-index: 2;
+    transition: transform 0.3s ease;
 }
+
 
 .gradient {
     position: absolute;
@@ -101,43 +136,60 @@ body {
     background: linear-gradient(to top, rgba(0, 0, 0, 20), transparent);
 }
 
-.image-title {
-    position: absolute;
-    bottom: 27px;
-    left: 18px;
-    color: white;
-    font-size: 16px;
-    z-index: 2;
-}
-.image-title a:hover {
-text-decoration: underline;
+.nome{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  transition: text-decoration 0.3s ease;
 }
 
-.intro h1 span {
+.nome:hover {
+  text-decoration: underline;
+}
+
+/*FINE homepage - vesuvio-card*/
+
+/*HOMEPAGE PT2*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 30px;
+}
+
+.intro h1 {
+    margin: 0;
     background-color: black;
     color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    padding: 1rem;
-    display: inline-block;
-  }
-
-  .see-more {
-    text-decoration: underline;
-    color: black;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    display: inline-block;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 10px 20px;
   }
 
   .cards {
     display: flex;
-    gap: 1.5rem;
+    gap: 30px;
   }
+
+
+  .see-more {
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  /*HOMEPAGE PT2 FINE*/
+
 
   .card {
     position: relative;
-    display: block;
     width: 300px;
     height: 400px;
     border-radius: 25px;
@@ -174,74 +226,57 @@ text-decoration: underline;
   }
 
   .overlay p {
-    margin: 0;
-    font-size: 1.1rem;
+    margin-left: -20px;
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 16px;
     font-weight: 500;
     color: white;
     text-align: center;
 }
 
-.footer {
-    background-color: #d3d3d3;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .footer-nav {
-    margin-bottom: 8px;
-  }
-  
-  .footer a {
-    margin: 0 15px;
-    color: black;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-copy {
-    margin: 0;
-  }
 
-  .parchi-section {
-    padding: 50px;
+  /*PAGINA PARCHI*/
+
+  .parchi-hero {
+    padding: 40px;
   }
   
-  .parchi-titolo {
-    font-size: 64px;
+  .parchi-hero h1 {
+    font-size: 128px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 0;
+    margin-bottom: 30px;
   }
   
   .parchi-contenitore {
     display: flex;
-    align-items: flex-start;
     gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
   
   .parchi-testo {
     background-color: black;
     color: white;
     padding: 20px;
-    width: 500px;
-    font-size: 28px;
+    font-size: 40px;
     line-height: 1.3;
+    flex: 1;
+    min-width: 300px;
   }
   
   .parchi-galleria {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
     flex-wrap: wrap;
-    max-width: 400px;
+    gap: 20px;
+    flex: 1; 
+    min-width: 300px;
   }
   
   .parchi-card {
-    width: 150px;
-    height: 250px;
+    width: calc(50% - 10px);
+    height: 400px;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
@@ -266,487 +301,445 @@ text-decoration: underline;
   }
   
   .parchi-piccola {
-    height: 150px;
-    margin-top: 20px;
-  }
-
-  .grd_p1234 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px;
-    background: white;
-  }
-  
-  .crd_x999 {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .crd_x999:hover {
-    transform: scale(1.03);
-  }
-  
-  .crd_x999 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 20px;
-  }
-  
-  .ttl_p999 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 12px 16px;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  
-  .crd_x999::after {
-    content: "→";
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    font-size: 18px;
-    color: white;
-    opacity: 0.9;
-  }
-  
-  .selected_abc {
-    border: 3px solid #2f80ed;
-    padding: 2px;
-    box-sizing: border-box;
-  }.grd_p1234 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px;
-    background: white;
-  }
-  
-  .crd_x999 {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .crd_x999:hover {
-    transform: scale(1.03);
-  }
-  
-  .crd_x999 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 20px;
-  }
-  
-  .ttl_p999 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 12px 16px;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  
-  .crd_x999::after {
-    content: "→";
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    font-size: 18px;
-    color: white;
-    opacity: 0.9;
-  }
-  
-  .selected_abc {
-    padding: 2px;
-    box-sizing: border-box;
-  }
-
-  .a9x1g-container {
-    background-color: white;
-    padding: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  
-  .a9x1g-title {
-    font-family: Arial, sans-serif;
-    font-size: 120px;
-    font-weight: 900;
-    margin: 0 0 40px 0;
-  }
-  
-  .a9x1g-title strong {
-    font-weight: 900;
-  }
-  
-  .a9x1g-subtitle {
-    font-family: Arial, sans-serif;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  .cont_ae19 {
-    padding: 40px 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .titolo_qo39 {
-    font-size: 28px;
-    font-weight: 500;
-    border-bottom: 2px solid #000;
-    display: inline-block;
-    margin-bottom: 25px;
-  }
-  
-  .testo_mf82 {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #000;
-    margin-bottom: 40px;
-  }
-  
-  .galleria_wr12 {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  .img_zk51 {
-    width: 100%;
-    max-width: 250px;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .contenitore_kx93 {
-    padding: 40px 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .titolo_xp20 {
-    font-size: 28px;
-    font-weight: 500;
-    margin-bottom: 25px;
-  }
-  
-  .griglia_yb72 {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 30px;
-  }
-  
-  .colonna_testo_dq11 {
-    flex: 2;
-  }
-  
-  .testo_er88 {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #000;
-  }
-  
-  .colonna_immagini_wk55 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .imgbox_wk91 {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  
-  .imgbox_wk91 img {
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
-    display: block;
-    border-radius: 20px;
-  }
-  
-  .imgbox_wk91 span {
-    position: absolute;
-    bottom: 8px;
-    left: 12px;
-    font-size: 13px;
-    color: white;
-    text-shadow: 0 0 4px rgba(0,0,0,0.8);
-  }
-  
-  .img_grande_vc78 {
-    position: relative;
-    margin-top: 30px;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  
-  .img_grande_vc78 img {
-    width: 100%;
     height: 300px;
-    object-fit: cover;
-    border-radius: 20px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: 50px;
   }
   
-  .img_grande_vc78 span {
+
+  /*Griglia nella pagina dei parchi*/
+
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px 40px;
+    max-width: 1800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .card-parchi {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 25px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-parchi:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
+  .card-parchi img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-overlay {
     position: absolute;
-    bottom: 10px;
-    left: 20px;
-    font-size: 14px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     color: white;
-    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    font-size: 24px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+  }
+  
+  .nome {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .nome:hover {
+    text-decoration: underline;
   }
 
-  .rtyu-container {
-    padding: 60px;
-    max-width: 1000px;
-    margin: auto;
-    margin-left: 100px;
+  /*FINE PAGINA PARCHI*/
+
+
+ /*PAGINA ATTIVITÀ*/
+
+ .attivita-hero {
+  padding: 40px;
+}
+
+.attivita-hero h1 {
+  font-size: 128px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.attivita-contenitore {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.attivita-testo {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 40px;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 300px;
+}
+
+.attivita-galleria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1; 
+  min-width: 300px;
+}
+
+.attivita-card {
+  width: calc(50% - 10px);
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: #ccc;
+}
+
+.attivita-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+.attivita-card span {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+  text-shadow: 0px 0px 4px black;
+}
+
+.attivita-piccola {
+  height: 300px;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+.paragrafo{
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.paragrafo h1 {
+  font-size: 48px;
+  font-weight: 500;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.paragrafo h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.paragrafo h3{
+  font-weight: 500;
+}
+
+.paragrafo p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.paragrafo ul{
+  padding-left: 15px;
+}
+
+.paragrafo li{
+  padding-bottom: 10px;
+}
+
+.paragrafo-img{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.paragrafo-img img {
+  max-width: 250px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-basis: calc(25% - 15px);
+}
+
+.img{
+  width: 100%;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;   
+}
+
+.img img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+/*FINE ATTIVITA*/
+
+
+/*PARCHI*/
+
+.parchi-titolo {
+  max-width: 1200px;
+  margin-top: 100px;
+  padding: 0 80px;
+}
+
+.parchi-titolo h1 {
+  font-size: 128px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.parchi-titolo p{
+  font-size: 64px;
+  margin-top: 0;
+}
+
+.linea {
+  font-size: 28px;
+  font-weight: 500;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+}
+
+.paragrafo-img2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.paragrafo-img2 img {
+  border-radius: 20px;
+  height: 450px;
+  width: auto;
+  max-width: 48%;
+  object-fit: cover;
+}
+
+
+
+  .footer {
+    margin-top: 100px;
+    background-color: #d3d3d3;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
   }
   
-  .zxcv-titolo {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
+  .footer-nav {
+    margin-bottom: 8px;
+  }
+  
+  .footer a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
     text-decoration: underline;
   }
   
-  .qwer-testo {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #000;
-    margin-bottom: 40px;
-  }
-  
-  .hjkl-immagini {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .asdf-img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 20px;
-    object-fit: cover;
+  .footer-copy {
+    margin: 0;
   }
 
-  @media (max-width: 1024px) {
+
+
+  @media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        background-color: white;
+        height: 100px;
+    }
+
+    .nav-sinistra{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav-centrale {
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .contenitore1 {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .text-content h1 {
+      font-size: 64px;
+      margin-bottom: 30px;
+    }
+
     .container {
       flex-direction: column;
       align-items: center;
-      padding: 20px;
-      gap: 20px;
+    }
+  
+    .intro {
+      text-align: center;
+    }
+  
+    .intro h1 {
+      font-size: 30px; 
     }
   
     .cards {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .card {
-      width: 90%;
-      height: auto;
-    }
-  
-    .text-content h1 {
-      font-size: 64px;
-      text-align: center;
-    }
-  
-    .image-card {
-      width: 90%;
-      height: auto;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .nav-links {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .navbar {
-      height: auto;
-      padding: 10px;
-    }
-  
-    .intro h1 span {
-      font-size: 2rem;
-      padding: 0.8rem;
-      text-align: center;
-    }
-  
-    .see-more {
-      text-align: center;
-      display: block;
-      margin-top: 15px;
-    }
-  
-    .text-content h1 {
-      font-size: 48px;
-    }
-  
-    .parchi-titolo {
-      font-size: 36px;
-      text-align: center;
-    }
-  
-    .parchi-contenitore {
+      display: flex;
       flex-direction: column;
       gap: 20px;
-    }
-  
-    .parchi-testo {
+      align-items: center;
       width: 100%;
-      font-size: 20px;
     }
   
-    .parchi-galleria {
-      max-width: 100%;
-      justify-content: center;
+    .card-home {
+      width: 100%;
     }
   
-    .parchi-card {
-      width: 45%;
-      height: 180px;
-    }
-  
-    .grd_p1234 {
-      grid-template-columns: repeat(2, 1fr);
-      padding: 20px;
-      gap: 15px;
-    }
-  
-    .a9x1g-title {
-      font-size: 60px;
-      text-align: center;
-    }
-  
-    .a9x1g-subtitle {
-      font-size: 32px;
-      text-align: center;
-    }
-  
-    .rtyu-container,
-    .contenitore_kx93,
-    .cont_ae19 {
-      padding: 20px;
-      margin-left: 0;
-    }
-  
-    .griglia_yb72 {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .colonna_immagini_wk55 {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .imgbox_wk91 img {
-      height: 100px;
-    }
-  
-    .img_grande_vc78 img {
-      height: 200px;
-    }
-  
-    .galleria_wr12 {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .img_zk51 {
-      max-width: 90%;
+    .card-home img {
+      width: 100%;
       height: auto;
+      display: block;
     }
-  
-    .hjkl-immagini {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .asdf-img {
-      max-width: 90%;
-      height: auto;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .text-content h1 {
-      font-size: 36px;
-    }
-  
-    .arrow {
+
+    .nome {
       font-size: 20px;
+      padding-bottom: 20px;
+    }
+
+    .parchi-hero{
+      margin-top: 0;
+    }
+
+    .parchi-hero h1 {
+      margin-top: 10px;
+      font-size: 64px;
+    }
+
+    .parchi-testo{
+      font-size: 30px;
+    }
+
+    .parchi-card{
+      height: 300px;
+    }
+
+    .parchi-piccola {
+      width: 100%;
+      height: 300px;
+      display: block;
+    }
+
+    .container2 {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+
+    .attivita-hero{
+      margin-top: 0;
+    }
+
+    .attivita-hero h1 {
+      margin-top: 10px;
+      font-size: 64px;
+    }
+
+    .attivita-testo{
+      font-size: 30px;
+    }
+
+    .attivita-card{
+      height: 300px;
+    }
+
+    .paragrafo-img {
+        width: 100%;
+      }
+
+    .paragrafo-img img{
+      flex-basis: 100%;  
+       max-width: 100%; 
+      }
+
+    .parchi-titolo{
+      padding-left: 60px;
     }
   
-    .image-title {
-      font-size: 14px;
+    .parchi-titolo h1{
+      font-size: 64px;
     }
-  
-    .overlay p {
-      font-size: 1rem;
+
+    .parchi-titolo p{
+      font-size: 30px;
     }
-  
-    .ttl_p999 {
-      font-size: 12px;
-      padding: 10px;
+
+   .paragrafo-img2 {
+    flex-direction: column;
+    align-items: center;
     }
-  
-    .crd_x999::after {
-      font-size: 14px;
-      top: 8px;
-      right: 8px;
-    }
-  
-    .a9x1g-title {
-      font-size: 48px;
-    }
-  
-    .a9x1g-subtitle {
-      font-size: 24px;
-    }
-  
-    .intro h1 span {
-      font-size: 1.5rem;
-      padding: 0.5rem;
-    }
+
+  .paragrafo-img2 img {
+    max-width: 100%;
+    height: auto;   
   }
+}
